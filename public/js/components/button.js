@@ -17,7 +17,7 @@ export default class Button extends React.Component {
     }
     render(){
         return(
-            <input type = 'button' id="toggleButton" onClick={this.handleClick}></input>
+            <button type = 'button' className="btn btn-outline-info" id="toggleButton" onClick={this.handleClick}></button>
         );
     }
 }

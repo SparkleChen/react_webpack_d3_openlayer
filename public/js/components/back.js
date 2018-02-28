@@ -37,6 +37,10 @@ export default class Back extends React.Component {
          * super继承父类构造函数
          */
         super(props);
+        this.state = {
+            vectorHeatMap:null,
+            map:null
+        }
     }
 
     styleFunction(feature){
@@ -89,8 +93,7 @@ export default class Back extends React.Component {
         vectorHeatMap.getSource().on('addfeature', function(event) {
             event.feature.getGeometry().set('weight', 3);
         });
-
-       let map = new ol_Map({
+        let map = new ol_Map({
             layers: [
                 new ol_layer_Tile({
                     source: new ol_OSM()
@@ -108,10 +111,21 @@ export default class Back extends React.Component {
                 zoom: 2
             })
         });
-        map.addLayer(vectorHeatMap);
+        this.state.vectorHeatMap = vectorHeatMap;
+        this.state.map = map;
     }
     render() {
-
+        console.log(this.state);
+        let {map,vectorHeatMap} = this.state;
+        if(this.props.states){
+            if(this.state.map){
+                map.addLayer(vectorHeatMap);
+            }
+        }else{
+            if(this.state.map){
+                map.removeLayer(vectorHeatMap);
+            }
+        }
         return (
             <div id="map" className="map">
                 <Button dispatch={this.props.dispatch} states={this.props.states}/>
