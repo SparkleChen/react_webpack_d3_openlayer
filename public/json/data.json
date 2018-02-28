@@ -1,0 +1,36 @@
+{
+  "type": "FeatureCollection",
+  "rs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:3857"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      },
+      "properties":{
+        "ac":4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4e6, -5e6
+        ]
+      },
+      "properties":{
+        "ac":4
+      }
+    }
+  ]
+}
