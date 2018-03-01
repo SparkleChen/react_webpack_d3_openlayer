@@ -1,9 +1,14 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import { bindActionCreators } from 'redux'
+import {showTipsIs} from '../actions/popUpTipsAction'
+import {getBarGraph} from '../actions/barGraphAction'
+import {windowsResizeStyle,toggleLayer} from '../actions/buttonAction'
 import Front from '../components/front'
 import Back from '../components/back'
 
-import {windowsResizeStyle} from '../actions/buttonAction'
+
+
 
 class Animation extends Component {
     constructor(props) {
@@ -19,7 +24,8 @@ class Animation extends Component {
     }
 
     onWindowResize(e) {
-        this.props.dispatch(windowsResizeStyle());
+       /* this.props.dispatch(windowsResizeStyle());*/
+       this.props.dispatch.windowsResizeStyle();
     }
 
     render() {
@@ -40,14 +46,18 @@ class Animation extends Component {
             top:height,
             left:width
         }
+        let object = {
+            circleProperties:this.props.PopUpTipsReducer.circleProperties
+        }
         return (
             <div className="flip-container" style={style}>
                 <div className="flipper">
                     <div className="front">
+                        <label>省会城市年平均收入</label>
                         <Front dispatch={this.props.dispatch} bar={this.props.BarGraphReducer.d3_data}/>
                     </div>
                     <div className="back">
-                        <Back dispatch={this.props.dispatch} states={this.props.ButtonReducer.VectorLayerIs} />
+                        <Back action={this.props.actions} states={this.props.ButtonReducer.VectorLayerIs} circle={object} />
                     </div>
                 </div>
             </div>
@@ -58,5 +68,11 @@ class Animation extends Component {
 function mapStateToProps(state) {
     return state;
 }
+function mapDispatchToProps(dispatch){
+ return {
+        actions:bindActionCreators({showTipsIs,toggleLayer},dispatch),
+        dispatch:bindActionCreators({getBarGraph,windowsResizeStyle},dispatch)
+    }
+}
 
-export default connect(mapStateToProps)(Animation);
+export default connect(mapStateToProps,mapDispatchToProps)(Animation);

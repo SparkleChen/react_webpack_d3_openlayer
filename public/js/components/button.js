@@ -10,7 +10,7 @@ export default class Button extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick(){
-        this.props.dispatch(toggleLayer(this.props.states));
+        this.props.dispatch(this.props.states);
     }
     componentDidMount(){
 

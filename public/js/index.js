@@ -12,6 +12,7 @@ import '../css/animation.css'
 import '../css/front.css'
 import '../css/back.css'
 import '../css/openlayers.css'
+import '../css/popUpTips.css'
 
 const store = createStore(
     reducer,

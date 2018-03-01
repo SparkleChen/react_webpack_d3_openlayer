@@ -1,0 +1,45 @@
+{"type": "FeatureCollection",
+  "rs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+"features":
+[
+{"type": "Feature","properties":{"id":"65","name":"新疆","cp":[84.9023,41.748],"childNum":18},"geometry":{"type":"Point","coordinates":[84.9023,41.748]}},
+{"type": "Feature","properties":{"id":"54","name":"西藏","cp":[88.7695,31.6846],"childNum":7},"geometry":{"type":"Point","coordinates":[88.7695,31.6846]}},
+{"type": "Feature","properties":{"id":"15","name":"内蒙古","cp":[117.5977,44.3408],"childNum":12},"geometry":{"type":"Point","coordinates":[117.5977,44.3408]}},
+{"type": "Feature","properties":{"id":"63","name":"青海","cp":[96.2402,35.4199],"childNum":8},"geometry":{"type":"Point","coordinates":[96.2402,35.4199]}},
+{"type": "Feature","properties":{"id":"51","name":"四川","cp":[102.9199,30.1904],"childNum":21},"geometry":{"type":"Point","coordinates":[102.9199,30.1904]}},
+{"type": "Feature","properties":{"id":"23","name":"黑龙江","cp":[128.1445,48.5156],"childNum":13},"geometry":{"type":"Point","coordinates":[128.1445,48.5156]}},
+{"type": "Feature","properties":{"id":"62","name":"甘肃","cp":[95.7129,40.166],"childNum":14},"geometry":{"type":"Point","coordinates":[95.7129,40.166]}},
+{"type": "Feature","properties":{"id":"53","name":"云南","cp":[101.8652,25.1807],"childNum":16},"geometry":{"type":"Point","coordinates":[101.8652,25.1807]}},
+{"type": "Feature","properties":{"id":"45","name":"广西","cp":[108.2813,23.6426],"childNum":14},"geometry":{"type":"Point","coordinates":[108.2813,23.6426]}},
+{"type": "Feature","properties":{"id":"43","name":"湖南","cp":[111.5332,27.3779],"childNum":14},"geometry":{"type":"Point","coordinates":[111.5332,27.3779]}},
+{"type": "Feature","properties":{"id":"61","name":"陕西","cp":[109.5996,35.6396],"childNum":10},"geometry":{"type":"Point","coordinates":[109.5996,35.6396]}},
+{"type": "Feature","properties":{"id":"44","name":"广东","cp":[113.4668,22.8076],"childNum":21},"geometry":{"type":"Point","coordinates":[113.4668,22.8076]}},
+{"type": "Feature","properties":{"id":"22","name":"吉林","cp":[126.4746,43.5938],"childNum":9},"geometry":{"type":"Point","coordinates":[126.4746,43.5938]}},
+{"type": "Feature","properties":{"id":"13","name":"河北","cp":[115.4004,37.9688],"childNum":11},"geometry":{"type":"Point","coordinates":[115.4004,37.9688]}},
+{"type": "Feature","properties":{"id":"42","name":"湖北","cp":[112.2363,31.1572],"childNum":17},"geometry":{"type":"Point","coordinates":[112.2363,31.1572]}},
+{"type": "Feature","properties":{"id":"52","name":"贵州","cp":[106.6113,26.9385],"childNum":9},"geometry":{"type":"Point","coordinates":[106.6113,26.9385]}},
+{"type": "Feature","properties":{"id":"37","name":"山东","cp":[118.7402,36.4307],"childNum":17},"geometry":{"type":"Point","coordinates":[118.7402,36.4307]}},
+{"type": "Feature","properties":{"id":"36","name":"江西","cp":[116.0156,27.29],"childNum":11},"geometry":{"type":"Point","coordinates":[116.0156,27.29]}},
+{"type": "Feature","properties":{"id":"41","name":"河南","cp":[113.4668,33.8818],"childNum":17},"geometry":{"type":"Point","coordinates":[113.4668,33.8818]}},
+{"type": "Feature","properties":{"id":"21","name":"辽宁","cp":[122.3438,41.0889],"childNum":14},"geometry":{"type":"Point","coordinates":[122.3438,41.0889]}},
+{"type": "Feature","properties":{"id":"14","name":"山西","cp":[112.4121,37.6611],"childNum":11},"geometry":{"type":"Point","coordinates":[112.4121,37.6611]}},
+{"type": "Feature","properties":{"id":"34","name":"安徽","cp":[117.2461,32.0361],"childNum":17},"geometry":{"type":"Point","coordinates":[117.2461,32.0361]}},
+{"type": "Feature","properties":{"id":"35","name":"福建","cp":[118.3008,25.9277],"childNum":9},"geometry":{"type":"Point","coordinates":[118.3008,25.9277]}},
+{"type": "Feature","properties":{"id":"33","name":"浙江","cp":[120.498,29.0918],"childNum":11},"geometry":{"type":"Point","coordinates":[120.498,29.0918]}},
+{"type": "Feature","properties":{"id":"32","name":"江苏","cp":[120.0586,32.915],"childNum":13},"geometry":{"type":"Point","coordinates":[120.0586,32.915]}},
+{"type": "Feature","properties":{"id":"50","name":"重庆","cp":[107.7539,30.1904],"childNum":40},"geometry":{"type":"Point","coordinates":[107.7539,30.1904]}},
+{"type": "Feature","properties":{"id":"64","name":"宁夏","cp":[105.9961,37.3096],"childNum":5},"geometry":{"type":"Point","coordinates":[105.9961,37.3096]}},
+{"type": "Feature","properties":{"id":"46","name":"海南","cp":[109.9512,19.2041],"childNum":18},"geometry":{"type":"Point","coordinates":[109.9512,19.2041]}},
+{"type": "Feature","properties":{"id":"71","name":"台湾","cp":[121.0254,23.5986],"childNum":1},"geometry":{"type":"Point","coordinates":[121.0254,23.5986]}},
+{"type": "Feature","properties":{"id":"11","name":"北京","cp":[116.4551,40.2539],"childNum":19},"geometry":{"type":"Point","coordinates":[116.4551,40.2539]}},
+{"type": "Feature","properties":{"id":"12","name":"天津","cp":[117.4219,39.4189],"childNum":18},"geometry":{"type":"Point","coordinates":[117.4219,39.4189]}},
+{"type": "Feature","properties":{"id":"31","name":"上海","cp":[121.4648,31.2891],"childNum":19},"geometry":{"type":"Point","coordinates":[121.4648,31.2891]}},
+{"type": "Feature","properties":{"id":"81","name":"香港","cp":[114.2578,22.3242],"childNum":1},"geometry":{"type":"Point","coordinates":[114.2578,22.3242]}},
+{"type": "Feature","properties":{"id":"82","name":"澳门","cp":[113.5547,22.1484],"childNum":1},"geometry":{"type":"Point","coordinates":[113.5547,22.1484]}}
+]
+}

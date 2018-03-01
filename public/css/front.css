@@ -1,3 +1,4 @@
+/*
 .bar {
     fill: steelblue;
 }
@@ -6,9 +7,31 @@
     fill: brown;
 }
 
+
 .axis--x path {
     display: none;
 }
+*/
+.axis text {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.bar {
+    fill: steelblue;
+    fill-opacity: .9;
+}
+
+.x.axis path {
+    display: none;
+}
+
 #d3 {
     width:960px;
     height:500px;
