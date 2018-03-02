@@ -11,13 +11,17 @@ export default class PopUpTips extends React.Component {
 
     }
     render(){
+        //弹框位置样式
         let style = {
-            left:this.props.x,
-            top:this.props.y
+            left:this.props.properties.x + 25,
+            top:this.props.properties.y - 80
         }
         return(
-            <div id="popUp" style={style}>
-                {this.props.title}
+            <div>
+                <div id="popUp" style={style}>
+                    &nbsp;地点：{this.props.properties.title}<br/>
+                    &nbsp;月均收入：{this.props.properties.income}
+                </div>
             </div>
         );
     }

@@ -3,12 +3,9 @@ import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux'
 import {showTipsIs} from '../actions/popUpTipsAction'
 import {getBarGraph} from '../actions/barGraphAction'
-import {windowsResizeStyle,toggleLayer} from '../actions/buttonAction'
+import {windowsResizeStyle,heatMap} from '../actions/buttonAction'
 import Front from '../components/front'
 import Back from '../components/back'
-
-
-
 
 class Animation extends Component {
     constructor(props) {
@@ -18,17 +15,18 @@ class Animation extends Component {
         super(props);
         this.onWindowResize = this.onWindowResize.bind(this);
     }
-
     componentDidMount() {
         window.addEventListener('resize', this.onWindowResize);
     }
 
-    onWindowResize(e) {
-       /* this.props.dispatch(windowsResizeStyle());*/
+    /**
+     * 窗口事件
+     */
+    onWindowResize() {
        this.props.dispatch.windowsResizeStyle();
     }
-
     render() {
+        //居中设置
         let height,width;
         if(this.props.ButtonReducer.height>480){
             height = (this.props.ButtonReducer.height-480)/2;
@@ -53,11 +51,11 @@ class Animation extends Component {
             <div className="flip-container" style={style}>
                 <div className="flipper">
                     <div className="front">
-                        <label>省会城市年平均收入</label>
+                        <label style={{"position":"absolute","left":"40%"}}>2016省会城市月平均收入</label>
                         <Front dispatch={this.props.dispatch} bar={this.props.BarGraphReducer.d3_data}/>
                     </div>
                     <div className="back">
-                        <Back action={this.props.actions} states={this.props.ButtonReducer.VectorLayerIs} circle={object} />
+                        <Back action={this.props.actions} heatMapState={this.props.ButtonReducer.heatMapState} circle={object} />
                     </div>
                 </div>
             </div>
@@ -65,12 +63,18 @@ class Animation extends Component {
     }
 }
 
+/**
+ *绑定state
+ */
 function mapStateToProps(state) {
     return state;
 }
+/**
+ *绑定dispatch
+ */
 function mapDispatchToProps(dispatch){
  return {
-        actions:bindActionCreators({showTipsIs,toggleLayer},dispatch),
+        actions:bindActionCreators({showTipsIs,heatMap},dispatch),
         dispatch:bindActionCreators({getBarGraph,windowsResizeStyle},dispatch)
     }
 }

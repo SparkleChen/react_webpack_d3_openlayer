@@ -6,14 +6,14 @@ export const bar = (data) =>({
     d3_data:data
 });
 
+/**
+ * 获取数据
+ * @returns {function(*)}
+ */
 export function getBarGraph(){
     return dispatch=>{
-        d3.tsv("../../json/income.json", function(d) {
-            //d.frequency = +d.frequency;
-            return d;
-        }, function(error, data) {
-            if (error) throw error;
-            dispatch(bar(data));
-        });
+       d3.json("../../json/income.json",function(data){
+           dispatch(bar(data));
+       });
     }
 }
