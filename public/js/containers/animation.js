@@ -48,7 +48,7 @@ class Animation extends Component {
             circleProperties:this.props.PopUpTipsReducer.circleProperties
         }
         return (
-            <div className="flip-container" style={style}>
+        <div className="flip-container" style={style}>
                 <div className="flipper">
                     <div className="front">
                         <label style={{"position":"absolute","left":"40%"}}>2016省会城市月平均收入</label>

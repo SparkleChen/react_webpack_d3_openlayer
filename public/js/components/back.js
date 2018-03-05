@@ -154,17 +154,11 @@ export default class Back extends React.Component {
     render() {
         let {map, heatMap} = this.state;
         this.state.map ? (this.props.heatMapState ? map.addLayer(heatMap) : map.removeLayer(heatMap)) : "";
-        let properties = this.props.circle.circleProperties?{
-            x:this.props.circle.circleProperties.x,
-            y:this.props.circle.circleProperties.y,
-            title:this.props.circle.circleProperties.title,
-            income:this.props.circle.circleProperties.income
-        }:"";
+        let properties = this.props.circle.circleProperties?{ ...this.props.circle.circleProperties }:"";
         return (
             <div id="map" className="map">
                 {<Button dispatch={this.props.action} heatMapState={this.props.heatMapState}/>}
-                {(this.props.circle.circleProperties && this.props.circle.circleProperties.isShow) ?
-                    <PopUpTips properties={properties}/> : ""}
+                {(this.props.circle.circleProperties && this.props.circle.circleProperties.isShow)&&<PopUpTips properties={properties}/>}
             </div>
         );
     }
